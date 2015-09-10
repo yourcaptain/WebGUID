@@ -10,5 +10,5 @@ COPY app /app
 WORKDIR '/app
 RUN npm install
 
-EXPOSE 80
+EXPOSE 3000
 CMD ["nodejs", "/app/app.js"]
