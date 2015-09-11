@@ -10,8 +10,9 @@ router.get('/', function(req, res, next) {
   
   //20150910 增加返回GUID的代码
   var val = guid.new();
-  res.type('text/plain');
-  res.json(val);
+  res.type('application/json');
+  //res.json(val);
+  res.end(JSON.stringify('{guid : '+val+'}'));
 });
 
 module.exports = router;
